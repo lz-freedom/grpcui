@@ -6,6 +6,8 @@ import (
 	"encoding/base64"
 	"encoding/json"
 	"fmt"
+	"github.com/fullstorydev/grpcui/pkg/grpc_util"
+	"github.com/golang/glog"
 	"io"
 	"io/ioutil"
 	"math"
@@ -395,10 +397,67 @@ func invokeRPC(ctx context.Context, methodName string, ch grpcdynamic.Channel, d
 		return nil
 	}
 
-	hdrs := make([]string, len(input.Metadata))
-	for i, hdr := range input.Metadata {
-		hdrs[i] = fmt.Sprintf("%s: %s", hdr.Name, hdr.Value)
+	hdrsMap := make(map[string]string, len(input.Metadata))
+	for _, hdr := range input.Metadata {
+		hdrsMap[hdr.Name] = hdr.Value
 	}
+
+	if value,ok := hdrsMap["ServerId"]; ok == false || value == "" {
+		hdrsMap["ServerId"] = "0"
+	}
+	if value,ok := hdrsMap["NetlibSessionId"]; ok == false || value == "" {
+		hdrsMap["NetlibSessionId"] = "0"
+	}
+	if value,ok := hdrsMap["AuthId"]; ok == false || value == "" {
+		hdrsMap["AuthId"] = "0"
+	}
+	if value,ok := hdrsMap["SessionId"]; ok == false || value == "" {
+		hdrsMap["SessionId"] = "0"
+	}
+	if value,ok := hdrsMap["TraceId"]; ok == false || value == "" {
+		hdrsMap["TraceId"] = "0"
+	}
+	if value,ok := hdrsMap["SpanId"]; ok == false || value == "" {
+		hdrsMap["SpanId"] = "0"
+	}
+	if value,ok := hdrsMap["ReceiveTime"]; ok == false || value == "" {
+		hdrsMap["ReceiveTime"] = "0"
+	}
+	if value,ok := hdrsMap["UserId"]; ok == false || value == "" {
+		hdrsMap["UserId"] = "0"
+	}
+	if value,ok := hdrsMap["ClientMsgId"]; ok == false || value == "" {
+		hdrsMap["ClientMsgId"] = "0"
+	}
+	if value,ok := hdrsMap["Layer"]; ok == false || value == "" {
+		hdrsMap["Layer"] = "0"
+	}
+
+	md := &grpc_util.RpcMetadata{
+		ServerId:        int32(stringChangeInt(hdrsMap["ServerId"])),
+		NetlibSessionId: stringChangeInt(hdrsMap["NetlibSessionId"]),
+		ClientAddr:      hdrsMap["ClientAddr"],
+		AuthId:          stringChangeInt(hdrsMap["AuthId"]),
+		SessionId:       stringChangeInt(hdrsMap["SessionId"]),
+		TraceId:         stringChangeInt(hdrsMap["TraceId"]),
+		SpanId:          stringChangeInt(hdrsMap["SpanId"]),
+		ReceiveTime:     stringChangeInt(hdrsMap["ReceiveTime"]),
+		From:            hdrsMap["From"],
+		To:              hdrsMap["To"],
+		UserId:          int32(stringChangeInt(hdrsMap["UserId"])),
+		ClientMsgId:     stringChangeInt(hdrsMap["ClientMsgId"]),
+		Layer:           int32(stringChangeInt(hdrsMap["Layer"])),
+		Extend:          nil,
+	}
+
+	buf, err := proto.Marshal(md)
+	if err != nil {
+		glog.Errorf("Marshal rpc_metadata error: %v", err)
+		return nil, err
+	}
+	hdrs := make([]string, 1)
+	hdrs[0] = fmt.Sprintf("rpc_metadata: %s", base64.StdEncoding.EncodeToString(buf))
+
 
 	if input.TimeoutSeconds > 0 {
 		var cancel context.CancelFunc
@@ -420,6 +479,11 @@ func invokeRPC(ctx context.Context, methodName string, ch grpcdynamic.Channel, d
 	}
 
 	return &result, nil
+}
+
+func stringChangeInt(str string) (num int64) {
+	num, _ = strconv.ParseInt(str, 10, 64)
+	return
 }
 
 type rpcMetadata struct {
