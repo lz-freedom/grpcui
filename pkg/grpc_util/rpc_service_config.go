@@ -18,7 +18,7 @@
 package grpc_util
 
 import (
-	"github.com/fullstorydev/grpcui/pkg/grpc_util/service_discovery"
+	"github.com/lz-freedom/grpcui/pkg/grpc_util/service_discovery"
 )
 
 type RPCServerConfig struct {

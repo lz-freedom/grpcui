@@ -22,7 +22,7 @@ import (
 	"encoding/json"
 	"fmt"
 	"go.etcd.io/etcd/clientv3"
-	"github.com/fullstorydev/grpcui/pkg/net2"
+	"github.com/lz-freedom/grpcui/pkg/net2"
 	"testing"
 	"time"
 )

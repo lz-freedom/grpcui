@@ -19,7 +19,7 @@ package codec
 
 import (
 	"bufio"
-	"github.com/fullstorydev/grpcui/pkg/net2"
+	"github.com/lz-freedom/grpcui/pkg/net2"
 	"io"
 )
 

@@ -19,8 +19,8 @@ package etcd_util
 
 import (
 	"go.etcd.io/etcd/clientv3"
-	"github.com/fullstorydev/grpcui/pkg/grpc_util/service_discovery"
-	"github.com/fullstorydev/grpcui/pkg/grpc_util/service_discovery/etcd3"
+	"github.com/lz-freedom/grpcui/pkg/grpc_util/service_discovery"
+	"github.com/lz-freedom/grpcui/pkg/grpc_util/service_discovery/etcd3"
 	"time"
 )
 

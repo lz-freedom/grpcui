@@ -19,7 +19,7 @@ package util
 
 import (
 	"encoding/hex"
-	"github.com/fullstorydev/grpcui/pkg/hack"
+	"github.com/lz-freedom/grpcui/pkg/hack"
 )
 
 func WriteString(x *BufferOutput, s string) {

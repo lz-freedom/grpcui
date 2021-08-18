@@ -20,7 +20,7 @@ package grpc_util
 import (
 	"context"
 	"github.com/golang/glog"
-	"github.com/fullstorydev/grpcui/mtproto"
+	"github.com/lz-freedom/grpcui/mtproto"
 	"google.golang.org/grpc"
 	"google.golang.org/grpc/codes"
 	"google.golang.org/grpc/status"

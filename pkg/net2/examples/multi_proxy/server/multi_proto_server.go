@@ -18,8 +18,8 @@
 package server
 
 import (
-	"github.com/fullstorydev/grpcui/pkg/net2"
 	"github.com/golang/glog"
+	"github.com/lz-freedom/grpcui/pkg/net2"
 	"net"
 )
 

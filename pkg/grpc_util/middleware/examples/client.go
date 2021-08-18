@@ -20,8 +20,8 @@ package main
 import (
 	"context"
 	"fmt"
-	"github.com/fullstorydev/grpcui/pkg/grpc_util/middleware/examples/zproto"
-	"github.com/fullstorydev/grpcui/pkg/util"
+	"github.com/lz-freedom/grpcui/pkg/grpc_util/middleware/examples/zproto"
+	"github.com/lz-freedom/grpcui/pkg/util"
 	"google.golang.org/grpc"
 	"io"
 	"math/rand"

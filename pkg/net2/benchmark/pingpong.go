@@ -18,9 +18,9 @@
 package main
 
 import (
-	"github.com/fullstorydev/grpcui/pkg/net2"
-	"github.com/fullstorydev/grpcui/pkg/util"
 	"github.com/golang/glog"
+	"github.com/lz-freedom/grpcui/pkg/net2"
+	"github.com/lz-freedom/grpcui/pkg/util"
 	"io"
 	"net"
 )

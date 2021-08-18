@@ -20,7 +20,7 @@ package main
 import (
 	"context"
 	"fmt"
-	"github.com/fullstorydev/grpcui/pkg/grpc_util/middleware/examples/helloworld"
+	"github.com/lz-freedom/grpcui/pkg/grpc_util/middleware/examples/helloworld"
 	"google.golang.org/grpc"
 	"math/rand"
 	"time"

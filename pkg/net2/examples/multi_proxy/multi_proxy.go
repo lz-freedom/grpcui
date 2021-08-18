@@ -18,8 +18,8 @@
 package main
 
 import (
-	"github.com/fullstorydev/grpcui/pkg/net2/examples/multi_proxy/server"
-	"github.com/fullstorydev/grpcui/pkg/util"
+	"github.com/lz-freedom/grpcui/pkg/net2/examples/multi_proxy/server"
+	"github.com/lz-freedom/grpcui/pkg/util"
 )
 
 func main() {

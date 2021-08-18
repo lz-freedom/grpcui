@@ -18,7 +18,7 @@
 package main
 
 import (
-	"github.com/fullstorydev/grpcui/pkg/grpc_util/middleware/examples/helloworld"
+	"github.com/lz-freedom/grpcui/pkg/grpc_util/middleware/examples/helloworld"
 	"golang.org/x/net/context"
 	"google.golang.org/grpc"
 	"log"

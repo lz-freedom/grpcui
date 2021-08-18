@@ -20,9 +20,9 @@ package server
 import (
 	"bytes"
 	"fmt"
-	"github.com/fullstorydev/grpcui/pkg/net2"
-	"github.com/fullstorydev/grpcui/pkg/net2/codec"
 	"github.com/golang/glog"
+	"github.com/lz-freedom/grpcui/pkg/net2"
+	"github.com/lz-freedom/grpcui/pkg/net2/codec"
 	"io"
 	"net"
 	"net/http"

@@ -18,7 +18,7 @@
 package grpc_util
 
 import (
-	"github.com/fullstorydev/grpcui/mtproto"
+	"github.com/lz-freedom/grpcui/mtproto"
 	"context"
 	"encoding/base64"
 	"fmt"

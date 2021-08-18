@@ -18,10 +18,10 @@
 package main
 
 import (
-	"go.etcd.io/etcd/clientv3"
-	"github.com/fullstorydev/grpcui/pkg/grpc_util/load_balancer"
-	"github.com/fullstorydev/grpcui/pkg/grpc_util/service_discovery/etcd3"
-	"github.com/fullstorydev/grpcui/pkg/grpc_util/service_discovery/examples/proto"
+	"github.com/coreos/etcd/clientv3"
+	"github.com/lz-freedom/grpcui/pkg/grpc_util/load_balancer"
+	"github.com/lz-freedom/grpcui/pkg/grpc_util/service_discovery/etcd3"
+	"github.com/lz-freedom/grpcui/pkg/grpc_util/service_discovery/examples/proto"
 	"golang.org/x/net/context"
 	"google.golang.org/grpc"
 	"log"

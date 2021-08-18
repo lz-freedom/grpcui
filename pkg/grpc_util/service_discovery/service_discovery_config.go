@@ -18,7 +18,7 @@
 package service_discovery
 
 import (
-	"github.com/fullstorydev/grpcui/pkg/util"
+	"github.com/lz-freedom/grpcui/pkg/util"
 )
 
 type ServiceDiscoveryServerConfig struct {

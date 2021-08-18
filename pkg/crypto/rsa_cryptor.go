@@ -21,7 +21,7 @@ import (
 	"crypto/rsa"
 	"crypto/x509"
 	"encoding/pem"
-	"github.com/fullstorydev/grpcui/pkg/util"
+	"github.com/lz-freedom/grpcui/pkg/util"
 	"io/ioutil"
 	"math/big"
 )

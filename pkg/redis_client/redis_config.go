@@ -19,7 +19,7 @@ package redis_client
 
 import (
 	"fmt"
-	"github.com/fullstorydev/grpcui/pkg/util"
+	"github.com/lz-freedom/grpcui/pkg/util"
 )
 
 // Redis client config.

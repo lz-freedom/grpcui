@@ -21,7 +21,7 @@ import (
 	"context"
 	"fmt"
 	"github.com/golang/glog"
-	"github.com/fullstorydev/grpcui/mtproto"
+	"github.com/lz-freedom/grpcui/mtproto"
 	"google.golang.org/grpc"
 	"reflect"
 	"testing"

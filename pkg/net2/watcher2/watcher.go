@@ -24,7 +24,7 @@ import (
 	"fmt"
 	"go.etcd.io/etcd/mvcc/mvccpb"
 	"github.com/golang/glog"
-	"github.com/fullstorydev/grpcui/pkg/net2"
+	"github.com/lz-freedom/grpcui/pkg/net2"
 )
 
 // see: /baselib/grpc_util/service_discovery/registry.go

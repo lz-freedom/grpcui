@@ -6,7 +6,7 @@ import (
 	"encoding/base64"
 	"encoding/json"
 	"fmt"
-	"github.com/fullstorydev/grpcui/pkg/grpc_util"
+	"github.com/lz-freedom/grpcui/pkg/grpc_util"
 	"github.com/golang/glog"
 	"io"
 	"io/ioutil"

@@ -1,6 +1,8 @@
-module github.com/fullstorydev/grpcui
+module github.com/lz-freedom/grpcui
 
 go 1.13
+
+replace google.golang.org/grpc => google.golang.org/grpc v1.26.0
 
 require (
 	github.com/fullstorydev/grpcurl v1.8.2

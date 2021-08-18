@@ -18,7 +18,7 @@
 package etcd_util
 
 import (
-	"github.com/fullstorydev/grpcui/pkg/util"
+	"github.com/lz-freedom/grpcui/pkg/util"
 )
 
 type EtcdConfig struct {

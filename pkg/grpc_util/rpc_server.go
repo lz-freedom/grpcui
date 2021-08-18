@@ -19,10 +19,10 @@ package grpc_util
 
 import (
 	"github.com/golang/glog"
-	"github.com/fullstorydev/grpcui/pkg/etcd_util"
-	"github.com/fullstorydev/grpcui/pkg/grpc_util/middleware/recovery2"
-	"github.com/fullstorydev/grpcui/pkg/grpc_util/service_discovery"
-	"github.com/fullstorydev/grpcui/pkg/grpc_util/service_discovery/etcd3"
+	"github.com/lz-freedom/grpcui/pkg/etcd_util"
+	"github.com/lz-freedom/grpcui/pkg/grpc_util/middleware/recovery2"
+	"github.com/lz-freedom/grpcui/pkg/grpc_util/service_discovery"
+	"github.com/lz-freedom/grpcui/pkg/grpc_util/service_discovery/etcd3"
 	"google.golang.org/grpc"
 	"net"
 	//"os"

@@ -25,7 +25,7 @@ import (
 	"encoding/hex"
 	"encoding/pem"
 	"fmt"
-	"github.com/fullstorydev/grpcui/mtproto"
+	"github.com/lz-freedom/grpcui/mtproto"
 	"math/big"
 	"os"
 	// "strconv"
